@@ -12,7 +12,8 @@ function getFlags(arr)  {
   return result;
 };
 
-
+// var arr = [{flags: [1, 2, 3]}, {flags: [4, 5, 6]}, {flags: [14, 51, 6]}];
+// console.log(getFlags(arr))
 
 /**
  * This function should return "true" only for "Object" type
@@ -30,6 +31,11 @@ function isObject(data)  {
 };
 
 
+// console.log(isObject({}))
+// console.log(isObject([]))
+// console.log(isObject(null))
+// console.log(isObject(NaN))
+
 
 /**
 * This function should return max number in array
@@ -45,6 +51,8 @@ function max(arr) {
   return max;
 };
 
+// console.log(max([1, 2, 4]));
+// console.log(max([-1, 2, 0]));
 
 /**
  *  This function should return sum of
@@ -63,6 +71,10 @@ function sumElements(arr) {
   return sum;
 };
 
+// console.log(sumElements([1, 2, 3]))
+// console.log(sumElements(['1', 'hi', 3]))
+// console.log(sumElements([Infinity, NaN, 1]))
+
 
 /**
  * This function should truncate the passed string and add "..." to
@@ -77,9 +89,12 @@ function sumElements(arr) {
  */
 function truncate(str, length = 0, replacer = '...')  {
   /* your logic here...*/
-  return newStr;
+  
+  return result;
 };
 
+
+// console.log(truncate('It is good weather to go for a walk', 12, '......'))
 
 
 /**
