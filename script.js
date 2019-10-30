@@ -5,13 +5,30 @@
  * const arr = [{flags: [1, 2, 3]}, {flags: [4, 5, 6]}, {flags: [14, 51, 6]}];
  * getFlags(arr); // [1, 2, 3, 4, 5, 6, 14, 51, 6]
  */
+
+const arr = [{flags: [1, 2, 3]}, {flags: [4, 5, 6]}, {flags: [14, 51, 6]}];
+
 function getFlags(arr)  {
 
-  /* your logic here...*/
-  
+  let newArr = [];
+  let result = [];
+
+  arr.forEach(function (item) {
+    newArr.push(item.flags);
+  });
+
+  newArr.map(function (item) {
+   item.map(function (number) {
+     result.push(number);
+   });
+  });
+
   return result;
 };
 
+var count = getFlags(arr);
+
+console.log(count);
 
 
 /**
@@ -23,12 +40,21 @@ function getFlags(arr)  {
  * isObject([]);   // false
  * isObject(null); // false
  */
-function isObject(data)  {
+function isObject(obj)  {
   /* your logic here...*/
 
-  return result;
+  if (typeof obj === 'object' && obj !== null && !Array.isArray(obj) ) {
+    return true;
+  }
+  else {
+    return false;
+  }
 };
 
+
+var log = isObject([]);
+
+console.log(log);
 
 
 /**
@@ -40,11 +66,18 @@ function isObject(data)  {
 * max([-1, 0]);   // 0
 */
 function max(arr) {
-  /* your logic here...*/
 
-  return max;
+  var maxCount = -Infinity;
+
+  for ( var i = 0; i < arr.length; i++) {
+    if (arr[i] > maxCount) {
+      maxCount = arr[i];
+    }
+  }
+  return maxCount;
 };
 
+console.log(max([-1, 77, 4]));
 
 /**
  *  This function should return sum of
@@ -60,9 +93,22 @@ function max(arr) {
  */
 function sumElements(arr) {
   /* your logic here...*/
+
+  var sum = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if(isNaN(i)) {
+      arr[i] = 0;
+    }
+    sum += arr[i];
+  }
+
   return sum;
 };
 
+
+var sumFn = sumElements(['NaN', 7, 9, 10]);
+console.log(sumFn);
 
 /**
  * This function should truncate the passed string and add "..." to
