@@ -216,19 +216,19 @@ function twoSums(arr, base) {
     inK++;
     if (arr[i] + arr[j] === base) {
       result = [arr[i], arr[j]];
-      // break;
+      break;
     }    
   }
   outK++
   if (result.length) {
-    // break;
+    break;
   }  
 
  }
 
 
-console.log('out loop => ', outK);
-console.log('in loop => ', inK);
+// console.log('out loop => ', outK);
+// console.log('in loop => ', inK);
 // console.log(arr.length);
 
   return result;
@@ -245,9 +245,89 @@ console.log('in loop => ', inK);
  */
 
 
-function sort(array) {
-  // your logic .....
+function mySort(array) {
+  // return array.sort(function(a,b) {
+  //   return a - b;
+  // })
+  for(var i = 0; i < array.length; i++){
+    for(var j = i + 1; j < array.length; j++) {
+      if (array[i] > array[j]) {
+        var elem = array[i];
+        array[i] = array[j];
+        array[j] = elem;
+      }
+    }
+  }
+  return array;
 }
 
 
 
+// console.log(mySort([203, 56, 17, 25, 55, 79, 99, 945]));
+// console.log('Vasja');
+
+// 'use strict'
+// function foo() {
+//   console.log(this)
+// }
+
+// foo();
+
+
+
+  // new showThis();
+
+  // var factorial = function(number) {
+  //   if (number <= 0) { // terminal case
+  //   return 1;
+  //   } else { // block to execute
+  //   return (number * factorial(number - 1));
+  //   }
+  //   };
+    // console.log(factorial(66));
+
+      // 6 * (5 * (4 * (3 * (2 * (1 * 1)))))
+// [[1,2, [4, 6, ]],3,5,8,12,44]
+
+
+
+// console.log('hi');
+// setTimeout(function cb() {
+// console.log('there');
+// }, 1000);
+// console.log('bye');
+
+
+// const User = (name, lastName) => {
+//   this._name = name;
+//   this.lastName = lastName;
+
+//   this.getName = function() {
+//     return this._name;    
+//   }
+
+//   this.setName = function(name) {
+//     this._name = name;
+//   }
+// }
+
+// var user = new User('Vasja', 'Ivanov');
+
+// console.log(user);
+
+// user._name = 'Petro'
+
+function User(name, lastName, yearOfBorn) {
+  this.name = name;
+  this.lastName = lastName;
+  this.yearOfBorn = yearOfBorn;
+
+  this.getAge = function() {
+    return new Date().getFullYear() - this.yearOfBorn;
+  }
+}
+
+
+var user = new User('Andriy', 'Sedorenlo', 1990);
+
+console.log(user);
