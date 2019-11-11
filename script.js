@@ -317,17 +317,16 @@ function mySort(array) {
 
 // user._name = 'Petro'
 
-function User(name, lastName, yearOfBorn) {
-  this.name = name;
-  this.lastName = lastName;
-  this.yearOfBorn = yearOfBorn;
+// function User(name, lastName, yearOfBorn) {
+//   this.name = name;
+//   this.lastName = lastName;
+//   this.yearOfBorn = yearOfBorn;
+//  }
 
-  this.getAge = function() {
-    return new Date().getFullYear() - this.yearOfBorn;
-  }
-}
+//  User.prototype.getAge = function() {
+//   return new Date().getFullYear() - this.yearOfBorn;
+// }
 
+// var user = new User('Andriy', 'Sedorenlo', 1990);
 
-var user = new User('Andriy', 'Sedorenlo', 1990);
-
-console.log(user);
+// console.log(user);
