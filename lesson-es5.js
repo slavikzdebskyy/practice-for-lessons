@@ -109,28 +109,169 @@
 
 
 
-class User {
+// class User {
 
-  constructor() {
-    let userList = [];
-  }
+//   constructor() {
+//     let userList = [];
+//   }
 
-  setUsers(array) {
-    this.userList = array // link
-    this.userList = [...array] // this.userList = array.map(el => el);
-  }
+//   setUsers(array) {
+//     this.userList = array // link
+//     this.userList = [...array] // this.userList = array.map(el => el);
+//   }
 
-  getUsers(count = this.userList.length) {
-    return this.userList.slice(0, count);
-  }
+//   getUsers(count = this.userList.length) {
+//     return this.userList.slice(0, count);
+//   }
 
   
 
 
-}
+// }
 
-const user = new User();
-user.setUsers(data);
- console.log(user.getUsers(10));
+// const user = new User();
+// user.setUsers(data);
+//  console.log(user.getUsers(10));
 
-console.log(data);
+// console.log(data);
+
+// const count = new countUser();
+
+// count.setUsers(data);
+
+// class UserAdd {
+//   constructor() {
+//     const newUser = {};
+//   }
+  // setUsers(firstName, lastName, count = Math.floor(Math.random() * 200) + 100)  {
+  //   console.log(`Hi everyone, im ${firstName} ${lastName}`);
+  //   Object.assign(newUser,
+  //       {id: co
+
+
+
+// class User {
+
+//   userList = [];
+
+//   constructor() {
+//     // const newUser = {};
+    
+//   }
+
+//   setUser(first_name, last_name, id = Math.floor(Math.random() * 200) + 100)  {
+
+//     const newUser = {
+//       id,
+//       first_name,
+//       last_name, 
+//     }
+
+//     this.userList.push(newUser); 
+//     console.log(`Hi everyone, im ${first_name} ${last_name}`);
+//   }
+
+//   setUsers(array) {
+//     this.userList = [...this.userList, ...array];
+
+//     // *********************
+
+//     // const arr = [];
+//     // this.userList.forEach(el => arr.push(el));
+//     // array.forEach(el => arr.push(el));
+//     // this.userList = arr;
+
+//     // ***********************
+//   }
+
+//   getUsersCount() {
+//     return this.userList.length;
+//   }
+
+//   getUsers() {    
+//     return this.userList;
+//   }
+
+//   getUserById(id) {
+//     const user =  this.userList.find(el => el.id === id);
+
+//     if (user) {
+//       return user;
+//     }
+//     console.error(`User with ID ${id} not found`);
+//   }
+
+// }
+
+// const users = new User();
+
+// console.log('data', data);
+// console.log('newUser', users);
+// debugger
+
+// console.log(users.userList[0]);
+
+
+// users.setUser('Anatoliy', 'Drozdov');
+// users.setUsers(data.slice(0,4));
+// users.setUser('Anatoliy', 'Drozdov');
+// users.setUser('Anatoliy', 'Drozdov');
+// newUser.getUsers(data)
+
+// console.log(users.getUserById(3345));
+
+// console.log('newUser', users);
+// console.log('data', data)
+
+// setTimeout(() => users.setUser('Anatoliy', 'Drozdov'), 3000);
+
+
+
+// class User {
+
+//   constructor(firstName, lastName, id) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.id = id
+//   } 
+
+// }
+
+// // const users = [new User('Ptro', 'Ivanov', 123), new User('Ptro', 'Ivanov', 13)]
+
+// const users = data.map(el => new User(el.first_name, el.last_name, el.id));
+
+
+// console.log(users)
+// // console.log(data.slice(0,4))
+
+
+// class Car {
+
+//   constructor(brand, model, type, fuel, year) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.type = type;
+//     this.fuel = fuel;
+//     this.year = year;   
+//   }
+
+// }
+
+// const audi = new Car('Audi', 'A6', 'sedan', 'Diesel', 2018);
+
+
+
+// class Track extends Car {
+
+//   constructor (brand, model, type, fuel, year, weghtNetto, weghtBrutto) {
+//     super(brand, model, type, fuel, year)
+//     this.weghtNetto = weghtNetto;
+//     this.weghtBrutto = weghtBrutto;
+//   }
+
+// }
+
+
+// console.log(new Track(...audi, 100, 200));
+
